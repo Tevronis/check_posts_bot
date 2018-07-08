@@ -19,9 +19,6 @@ PROXY_PORT = '3128'
 proxie = {'http': 'https://{}:{}/'.format(PROXY_SERVER, PROXY_PORT),
           'https': 'https://{}:{}/'.format(PROXY_SERVER, PROXY_PORT)}
 
-# delete/set webhook:
-# https://api.telegram.org/bot208996493:AAFjNkoaqm6nc04ozB1GJZvgJUIH9RWhVSI/deleteWebhook/
-# https://api.telegram.org/bot208996493:AAFjNkoaqm6nc04ozB1GJZvgJUIH9RWhVSI/setWebhook?url=https://c0e6d40d.ngrok.io/
 
 DELAY = 20
 START_CHECK = False
