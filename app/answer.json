@@ -1,0 +1,104 @@
+{
+  "result": [
+    {
+      "message": {
+        "text": "1",
+        "from": {
+          "language_code": "ru-RU",
+          "last_name": "Enc",
+          "username": "Michael_ardvyd",
+          "id": 135716423,
+          "first_name": "Michael",
+          "is_bot": false
+        },
+        "date": 1529906792,
+        "message_id": 343,
+        "chat": {
+          "first_name": "Michael",
+          "last_name": "Enc",
+          "type": "private",
+          "username": "Michael_ardvyd",
+          "id": 135716423
+        }
+      },
+      "update_id": 371751950
+    },
+    {
+      "message": {
+        "text": "2",
+        "from": {
+          "language_code": "ru-RU",
+          "last_name": "Enc",
+          "username": "Michael_ardvyd",
+          "id": 135716423,
+          "first_name": "Michael",
+          "is_bot": false
+        },
+        "date": 1529907025,
+        "message_id": 344,
+        "chat": {
+          "first_name": "Michael",
+          "last_name": "Enc",
+          "type": "private",
+          "username": "Michael_ardvyd",
+          "id": 135716423
+        }
+      },
+      "update_id": 371751951
+    },
+    {
+      "message": {
+        "text": "рш",
+        "from": {
+          "language_code": "ru-RU",
+          "last_name": "Enc",
+          "username": "Michael_ardvyd",
+          "id": 135716423,
+          "first_name": "Michael",
+          "is_bot": false
+        },
+        "date": 1529908123,
+        "message_id": 347,
+        "chat": {
+          "first_name": "Michael",
+          "last_name": "Enc",
+          "type": "private",
+          "username": "Michael_ardvyd",
+          "id": 135716423
+        }
+      },
+      "update_id": 371751952
+    },
+    {
+      "message": {
+        "from": {
+          "language_code": "ru-RU",
+          "last_name": "Enc",
+          "username": "Michael_ardvyd",
+          "id": 135716423,
+          "first_name": "Michael",
+          "is_bot": false
+        },
+        "entities": [
+          {
+            "length": 12,
+            "type": "bot_command",
+            "offset": 0
+          }
+        ],
+        "text": "/start_check",
+        "chat": {
+          "first_name": "Michael",
+          "last_name": "Enc",
+          "type": "private",
+          "username": "Michael_ardvyd",
+          "id": 135716423
+        },
+        "message_id": 354,
+        "date": 1529908248
+      },
+      "update_id": 371751953
+    }
+  ],
+  "ok": true
+}
