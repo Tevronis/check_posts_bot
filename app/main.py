@@ -7,9 +7,9 @@ from datetime import datetime
 import requests
 
 # Security
-BOT_TOKEN = ''
+BOT_TOKEN = '208996493:AAFjNkoaqm6nc04ozB1GJZvgJUIH9RWhVSI'
 URL = 'https://api.telegram.org/bot{}/'.format(BOT_TOKEN)
-VK_TOKEN = ''
+VK_TOKEN = '2e0516132e0516132e051613372e50dfbd22e052e0516137523b1196397d016cf92f539'
 WHITE_USER_LIST = []
 PROXY_LIST = ['149.3.91.202:3128', '190.153.139.121:62225', '183.88.52.208:8080', '125.24.4.114:8080', '47.88.5.58:808',
               '180.250.252.3:8080', '103.10.81.172:8080', '200.110.13.89:53281', '85.35.159.222:8080',
@@ -18,7 +18,6 @@ PROXY_SERVER = '149.3.91.202'
 PROXY_PORT = '3128'
 proxie = {'http': 'https://{}:{}/'.format(PROXY_SERVER, PROXY_PORT),
           'https': 'https://{}:{}/'.format(PROXY_SERVER, PROXY_PORT)}
-
 
 DELAY = 20
 START_CHECK = False
@@ -125,34 +124,34 @@ def write_json(data, filename='answer.json'):
 def send_message(chat_id, text='test text'):
     url = URL + 'sendMessage'
     answer = {'chat_id': chat_id, 'text': text}
-    #requests.post(url, json=answer)
+    requests.post(url, json=answer)
     print('LOG send_message: {} was send'.format(json.dumps(answer)))
-    for proxy in PROXY_LIST:
-        proxy_dict = {'http': 'https://{}/'.format(proxy), 'https': 'https://{}/'.format(proxy)}
-        try:
-            requests.post(url, json=answer, proxies=proxy_dict)
-            print('LOG send_message: {} was send'.format(json.dumps(answer)))
-            break
-        except:
-            print('Proxy {} not available, try next.'.format(proxy))
-            continue
+    # for proxy in PROXY_LIST:
+    #     proxy_dict = {'http': 'https://{}/'.format(proxy), 'https': 'https://{}/'.format(proxy)}
+    #     try:
+    #         requests.post(url, json=answer, proxies=proxy_dict)
+    #         print('LOG send_message: {} was send'.format(json.dumps(answer)))
+    #         break
+    #     except:
+    #         print('Proxy {} not available, try next.'.format(proxy))
+    #         continue
 
 
 def get_updates():
-    #r = requests.get(URL + 'getUpdates')
-    #print('LOG get_updates')
-    #return r.json()
-    for proxy in PROXY_LIST:
-        proxy_dict = {'http': 'https://{}/'.format(proxy), 'https': 'https://{}/'.format(proxy)}
-        try:
-            r = requests.get(URL + 'getUpdates', proxies=proxy_dict)
-            print('LOG get_updates')
-            #write_json(r.json())
-            return r.json()
-            break
-        except:
-            print('Proxy {} not available, try next.'.format(proxy))
-            continue
+    r = requests.get(URL + 'getUpdates')
+    print('LOG get_updates')
+    return r.json()
+    # for proxy in PROXY_LIST:
+    #     proxy_dict = {'http': 'https://{}/'.format(proxy), 'https': 'https://{}/'.format(proxy)}
+    #     try:
+    #         r = requests.get(URL + 'getUpdates', proxies=proxy_dict)
+    #         print('LOG get_updates')
+    #         #write_json(r.json())
+    #         return r.json()
+    #         break
+    #     except:
+    #         print('Proxy {} not available, try next.'.format(proxy))
+    #         continue
 
 
 def calculate(r):
